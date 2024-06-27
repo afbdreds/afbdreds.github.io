@@ -3,142 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f4f4f4;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding: 1rem 0;
-            text-align: center;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 1rem;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-        .profile {
-            background: #fff;
-            padding: 2rem;
-            margin: 2rem 0;
-            text-align: center;
-        }
-        .profile img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-        }
-        .skills, .projects, .contact {
-            background: #fff;
-            padding: 2rem;
-            margin: 2rem 0;
-        }
-        h2 {
-            text-align: center;
-            color: #333;
-        }
-        .skills ul, .projects ul {
-            list-style: none;
-            padding: 0;
-        }
-        .skills ul li, .projects ul li {
-            background: #f4f4f4;
-            margin: 0.5rem 0;
-            padding: 1rem;
-            border-radius: 5px;
-        }
-        .contact form {
-            display: flex;
-            flex-direction: column;
-        }
-        .contact form input, .contact form textarea {
-            margin: 0.5rem 0;
-            padding: 0.5rem;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .contact form button {
-            padding: 0.5rem;
-            border: none;
-            border-radius: 5px;
-            background: #333;
-            color: #fff;
-            cursor: pointer;
-        }
-    </style>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/aos.css">
 </head>
-<body>
-    <header>
-        <h1>My Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#profile">Profile</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div class="container">
-        <section id="profile" class="profile">
-            <img src="profile.jpg" alt="Profile Picture">
-            <h2>John Doe</h2>
-            <p>Hello! I am John Doe, a web developer with a passion for creating beautiful and functional websites.</p>
-        </section>
-        <section id="skills" class="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>React</li>
-                <li>Node.js</li>
-            </ul>
-        </section>
-        <section id="projects" class="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li>
-                    <h3>Project One</h3>
-                    <p>Description of project one.</p>
-                </li>
-                <li>
-                    <h3>Project Two</h3>
-                    <p>Description of project two.</p>
-                </li>
-                <li>
-                    <h3>Project Three</h3>
-                    <p>Description of project three.</p>
-                </li>
-            </ul>
-        </section>
-        <section id="contact" class="contact">
-            <h2>Contact</h2>
-            <form action="#">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
-    </div>
+<body data-aos-easing="slide" data-aos-duration="800" data-aos-delay="0">
+
+    <div id="colorlib-page">
+        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+        <aside id="colorlib-aside" role="complementary" class="js-fullheight text-center">
+            <h1 id="colorlib-logo"><a href="index.html">Your Name</a></h1>
+            <nav id="colorlib-main-menu" role="navigation">
+                <ul>
+                    <li class="colorlib-active"><a href="index.html">Home</a></li>
+                    <li><a href="notebooks.html" style="color: #383838">Notebooks</a></li>
+                    <li><a href="https://scholar.google.com" style="color: #383838">Google Scholar</a></li>
+                    <li><a href="https://www.researchgate.net" style="color: #383838">ResearchGate</a></li>
+                    <li><a href="https://www.linkedin.com" style="color: #383838">LinkedIn</a></li>
+                    <li><a href="https://github.com" style="color: #383838">GitHub</a></li>
+                    <li><a href="https://drive.google.com" style="color: #383838">CV</a></li>
+                </ul>
+            </nav>
+        </aside> <!-- END COLORLIB-ASIDE -->
+        <div id="colorlib-main">
+            <div class="hero-wrap js-fullheight" style="background-image: url('images/bg.jpg');" data-stellar-background-ratio="0.5">
+                <div class="overlay"></div>
+                <div class="js-fullheight d-flex justify-content-center align-items-center">
+                    <div class="col-md-8 text text-center">
+                        <div class="desc">
+                            <h2 class="subheading" style="color: #202020">Hello, How are you? I'm</h2> 
+                            <h1 class="mb-4" style="color: #202020">Your Name</h1>
+                            <p class="mb-4" style="color: black">A brief introduction about yourself.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="ftco-section">
+                <div class="container">
+                    <div class="row justify-content-center mb-5 pb-2">
+                        <div class="col-md-7 heading-section text-center ftco-animate">
+                            <h1 class="mb-4">E-mail me:</h1>
+                            <p><a href="mailto:your.email@example.com" class="btn-custom" style="color: black">your.email@example.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div><!-- END COLORLIB-MAIN -->
+    </div><!-- END COLORLIB-PAGE -->
+
+    <!-- loader -->
+    <div id="ftco-loader" class="fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"></circle><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"></circle></svg></div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/jquery.timepicker.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="js/google-map.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
