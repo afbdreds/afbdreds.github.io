@@ -3,69 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Python Notebooks</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <style>
         body {
-            background-color: #f8f9fa;
-            color: #333;
+            display: flex;
+            min-height: 100vh;
+            margin: 0;
         }
-        .container {
-            margin-top: 50px;
+        #sidebar {
+            width: 250px;
+            background: #343a40;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
         }
-        .card {
-            margin-bottom: 20px;
+        #sidebar h1 {
+            margin: 20px 0;
         }
-        .card-title {
-            color: #007bff;
+        #sidebar ul {
+            list-style: none;
+            padding: 0;
+            width: 100%;
+        }
+        #sidebar ul li {
+            margin: 15px 0;
+        }
+        #sidebar ul li a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        #sidebar ul li a:hover {
+            background: #495057;
+        }
+        #main-content {
+            flex: 1;
+            padding: 40px;
+            background: #f8f9fa;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1 class="text-center mb-5">Python Notebooks</h1>
-        
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Notebook 1: Data Analysis with Pandas</h5>
-                <p class="card-text">This notebook covers the basics of data analysis using the Pandas library in Python.</p>
-                <a href="https://github.com/your-repo/data-analysis-with-pandas.ipynb" class="btn btn-primary">View Notebook</a>
-            </div>
-        </div>
-        
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Notebook 2: Machine Learning with Scikit-Learn</h5>
-                <p class="card-text">Explore machine learning techniques and models using the Scikit-Learn library.</p>
-                <a href="https://github.com/your-repo/machine-learning-with-scikit-learn.ipynb" class="btn btn-primary">View Notebook</a>
-            </div>
-        </div>
-        
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Notebook 3: Data Visualization with Matplotlib</h5>
-                <p class="card-text">Learn how to create various types of data visualizations using Matplotlib.</p>
-                <a href="https://github.com/your-repo/data-visualization-with-matplotlib.ipynb" class="btn btn-primary">View Notebook</a>
-            </div>
-        </div>
-        
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Notebook 4: Deep Learning with TensorFlow</h5>
-                <p class="card-text">Introduction to deep learning concepts and implementation using TensorFlow.</p>
-                <a href="https://github.com/your-repo/deep-learning-with-tensorflow.ipynb" class="btn btn-primary">View Notebook</a>
-            </div>
-        </div>
-        
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Notebook 5: Natural Language Processing with NLTK</h5>
-                <p class="card-text">A guide to natural language processing techniques using the NLTK library.</p>
-                <a href="https://github.com/your-repo/natural-language-processing-with-nltk.ipynb" class="btn btn-primary">View Notebook</a>
-            </div>
-        </div>
+    <div id="sidebar">
+        <h1>Your Name</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="notebooks.html">Notebooks</a></li>
+                <li><a href="https://www.linkedin.com">LinkedIn</a></li>
+                <li><a href="https://github.com">GitHub</a></li>
+                <li><a href="https://drive.google.com">CV</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="main-content">
+        <h2>Notebooks</h2>
+        <ul>
+            <li><strong>Notebook 1:</strong> Description for Notebook 1</li>
+            <li><strong>Notebook 2:</strong> Description for Notebook 2</li>
+            <li><strong>Notebook 3:</strong> Description for Notebook 3</li>
+            <li><strong>Notebook 4:</strong> Description for Notebook 4</li>
+            <li><strong>Notebook 5:</strong> Description for Notebook 5</li>
+            <li><strong>Notebook 6:</strong> Description for Notebook 6</li>
+            <li><strong>Notebook 7:</strong> Description for Notebook 7</li>
+            <li><strong>Notebook 8:</strong> Description for Notebook 8</li>
+            <li><strong>Notebook 9:</strong> Description for Notebook 9</li>
+            <li><strong>Notebook 10:</strong> Description for Notebook 10</li>
+        </ul>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
