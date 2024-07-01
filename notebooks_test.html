@@ -47,35 +47,126 @@
             padding: 40px;
             background: #f8f9fa;
         }
+        .notebook {
+            background: #fff;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            padding: 20px;
+            margin: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .notebook h3 {
+            margin-top: 0;
+        }
+        .tags {
+            margin-top: 10px;
+        }
+        .tag {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 4px;
+            margin-right: 5px;
+            font-size: 0.8em;
+        }
     </style>
 </head>
 <body>
     <div id="sidebar">
-        <h1>Your Name</h1>
+        <h1>André</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="notebooks.html">Notebooks</a></li>
-                <li><a href="https://www.linkedin.com/in/andreboldrin/">LinkedIn</a></li>
-                <li><a href="https://github.com">GitHub</a></li>
-                <li><a href="https://drive.google.com/file/d/1dRNBA11PwpMCjW78WFBoBdxlHw9WIxnd/view?usp=sharing">CV</a></li>
+                <li><a href="https://www.linkedin.com/in/andreboldrin/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://github.com" target="_blank">GitHub</a></li>
+                <li><a href="https://drive.google.com/file/d/1dRNBA11PwpMCjW78WFBoBdxlHw9WIxnd/view?usp=sharing"target="_blank">CV</a></li>
             </ul>
         </nav>
     </div>
     <div id="main-content">
         <h2>Notebooks</h2>
-        <ul>
-            <li><strong>Notebook 1:</strong> Description for Notebook 1</li>
-            <li><strong>Notebook 2:</strong> Description for Notebook 2</li>
-            <li><strong>Notebook 3:</strong> Description for Notebook 3</li>
-            <li><strong>Notebook 4:</strong> Description for Notebook 4</li>
-            <li><strong>Notebook 5:</strong> Description for Notebook 5</li>
-            <li><strong>Notebook 6:</strong> Description for Notebook 6</li>
-            <li><strong>Notebook 7:</strong> Description for Notebook 7</li>
-            <li><strong>Notebook 8:</strong> Description for Notebook 8</li>
-            <li><strong>Notebook 9:</strong> Description for Notebook 9</li>
-            <li><strong>Notebook 10:</strong> Description for Notebook 10</li>
-        </ul>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="notebook">
+                        <h3><a href="MAL.html" target="_blank">Anime Popularity Analysis </a></h3>
+                        <p>This analysis explores the popularity of anime by leveraging data from MyAnimeList. By extracting and processing information on the top 500 most popular anime, we categorize them based on episode count and analyze their scores and member counts. </p>
+                        <div class="tags">
+                            <span class="tag">Data Wrangling</span>
+                            <span class="tag">Data Analysis</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="notebook">
+                        <h3><a href="Bitcoin_price_vs_Interest_analysis.html" target="_blank">Bitcoin Price vs Interest Analysis </a></h3>
+                        <p>This project investigates the relationship between Bitcoin prices and search interest over time. By integrating historical price data and Google Trends search metrics, we conduct correlation analysis and develop a linear regression model to assess the impact of public interest on Bitcoin's market value.</p>
+                        <div class="tags">
+                            <span class="tag">Data Analysis</span>
+                            <span class="tag">Time Series</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="notebook">
+                        <h3><a href="Project_Gutenberg.html" target="_blank">Analysis of Project Gutenberg Books </a></h3>
+                        <p>This project explores the analysis of vocabulary in Project Gutenberg books. By leveraging natural language processing techniques, it consolidates and analyzes text data</p>
+                        <div class="tags">
+                            <span class="tag">Natural Language Processing</span>
+                            <span class="tag">Text Analysis</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="notebook">
+                        <h3><a href="#" target="_blank">Notebook 4</a></h3>
+                        <p>Description for Notebook 4</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="notebook">
+                        <h3><a href="#" target="_blank">Notebook 5</a></h3>
+                        <p>Description for Notebook 5</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="notebook">
+                        <h3><a href="#" target="_blank">Notebook 6</a></h3>
+                        <p>Description for Notebook 6</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="notebook">
+                        <h3><a href="#" target="_blank">Notebook 7</a></h3>
+                        <p>Description for Notebook 7</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="notebook">
+                        <h3><a href="#" target="_blank">Notebook 8</a></h3>
+                        <p>Description for Notebook 8</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="notebook">
+                        <h3><a href="#" target="_blank">Notebook 9</a></h3>
+                        <p>Description for Notebook 9</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="notebook">
+                        <h3><a href="#" target="_blank">Notebook 10</a></h3>
+                        <p>Description for Notebook 10</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
@@ -83,4 +174,3 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
-
