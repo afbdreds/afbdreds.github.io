@@ -3,32 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Channel 1 - My TV</title>
+    <title>My TV - Home</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f0f0f0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
             margin: 0;
             padding: 0;
         }
 
-        h1 {
-            color: #333;
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
         }
 
-        #video-player {
-            margin: 20px auto;
-            max-width: 80%;
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .channel-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 15px;
+            width: 200px;
+            text-align: center;
+            text-decoration: none;
+            color: black;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .channel-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .channel-card img {
+            width: 100%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .channel-card h2 {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background-color: #333;
+            color: white;
+            margin-top: 20px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .channel-card {
+                width: 90%;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Channel 1</h1>
-    
-    <!-- YouTube Embed -->
-    <div id="video-player">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLS6-cWZzwyQymRu6yr6ZKF16GgaLydw2s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <header>
+        <h1>Welcome to My TV</h1>
+        <p>Select a channel to start watching!</p>
+    </header>
+
+    <div class="container">
+        <!-- Channel 1 Card -->
+        <a href="channel1.html" class="channel-card">
+            <img src="https://via.placeholder.com/200x100?text=Channel+1" alt="Channel 1">
+            <h2>Channel 1</h2>
+        </a>
+        
+        <!-- Channel 2 Card -->
+        <a href="channel2.html" class="channel-card">
+            <img src="https://via.placeholder.com/200x100?text=Channel+2" alt="Channel 2">
+            <h2>Channel 2</h2>
+        </a>
+
+        <!-- Channel 3 Card -->
+        <a href="channel3.html" class="channel-card">
+            <img src="https://via.placeholder.com/200x100?text=Channel+3" alt="Channel 3">
+            <h2>Channel 3</h2>
+        </a>
+        
+        <!-- Add more channels as needed -->
     </div>
+
+    <footer>
+        <p>&copy; 2024 My TV. All rights reserved.</p>
+    </footer>
 </body>
 </html>
