@@ -154,5 +154,58 @@
         });
     </script>
 
-</body>
+    <!-- Simple Pong Game Controlled by Slider -->
+    <div class="learn-card text-center">
+        <h3>🎮 Mini Pong Game (Slider Controls the Paddle)</h3>
+        <p>Move the slider to control the paddle and hit the ball!</p>
+
+        <input type="range" id="pongSlider" min="0" max="100" value="50" style="width:80%; margin-bottom:20px;">
+
+        <canvas id="pongCanvas" width="400" height="250" style="background:#0f172a; border:1px solid #334155; border-radius:8px;"></canvas>
+    </div>
+
+    <script>
+    const canvas = document.getElementById('pongCanvas');
+    const ctx = canvas.getContext('2d');
+
+    let ballX = 200, ballY = 125;
+    let ballDX = 3, ballDY = 2;
+    let paddleY = 100;
+    const paddleHeight = 60;
+
+    document.getElementById('pongSlider').addEventListener('input', function(e) {
+        paddleY = (canvas.height - paddleHeight) * (e.target.value / 100);
+    });
+
+    function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        ctx.fillStyle = '#38bdf8';
+        ctx.fillRect(10, paddleY, 10, paddleHeight);
+
+        ctx.beginPath();
+        ctx.arc(ballX, ballY, 8, 0, Math.PI * 2);
+        ctx.fillStyle = '#a855f7';
+        ctx.fill();
+
+        ballX += ballDX;
+        ballY += ballDY;
+
+        if (ballY < 8 || ballY > canvas.height - 8) ballDY *= -1;
+
+        if (ballX < 20 && ballY > paddleY && ballY < paddleY + paddleHeight) {
+            ballDX *= -1;
+        }
+
+        if (ballX < 0 || ballX > canvas.width) {
+            ballX = 200;
+            ballY = 125;
+            ballDX = 3;
+            ballDY = 2;
+        }
+
+        requestAnimationFrame(draw);
+    }
+
+    draw();
 </html>
