@@ -6,9 +6,18 @@
     <title>Interactive Web Analytics Learning Demo</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GPEW4VK3GX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);} 
+      gtag('js', new Date());
+      gtag('config', 'G-GPEW4VK3GX');
+    </script>
+
     <style>
         body {
-            background: #0f172a; /* dark navy */
+            background: #0f172a;
             padding: 40px;
             font-family: 'Inter', Arial, sans-serif;
             color: #e2e8f0;
@@ -23,7 +32,7 @@
         .learn-card, .website-card {
             border-radius: 14px;
             padding: 26px;
-            background: #1e293b; /* slate */
+            background: #1e293b;
             box-shadow: 0 8px 24px rgba(0,0,0,0.3);
             margin-bottom: 24px;
             transition: transform .2s ease, box-shadow .2s ease;
@@ -54,13 +63,13 @@
     </style>
 
     <!-- Microsoft Clarity -->
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "u85bybej6m");
-</script>
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "u81eusj3ai");
+    </script>
     
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GPEW4VK3GX"></script>
@@ -76,7 +85,6 @@
         <h1 class="mb-4">Interactive Web Analytics Learning Page</h1>
         <p>This page simulates real user actions while teaching concepts of Web Analytics, GA4, and Microsoft Clarity. Students can click buttons, explore funnels, and visualize how interactions are tracked.</p>
 
-        <!-- Learning Section -->
         <div class="learn-card">
             <h3>📊 Learn: What is Web Analytics?</h3>
             <p>Web analytics is the measurement, collection, analysis, and reporting of web data for understanding and optimizing web usage.</p>
@@ -89,7 +97,6 @@
             <button class="btn btn-primary" onclick="alert('Example: This would send an analytics event.')">See Example Event</button>
         </div>
 
-        <!-- Funnel Section -->
         <div class="learn-card">
             <h3>🧭 Conversion Funnel Example</h3>
             <p>This funnel shows how users progress through a typical e-commerce journey.</p>
@@ -101,27 +108,16 @@
             </div>
         </div>
 
-        <!-- Chart Demo Button -->
         <div class="learn-card text-center">
             <h3>📈 Show a Fake Analytics Chart</h3>
             <button class="btn btn-info" onclick="alert('This would normally load a chart library like Chart.js or GA4 exploration.')">Show Chart</button>
         </div>
-
-        <!-- Interaction Cards -->
-        
-
-        
-
-        
-
-        
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    
-    <!-- Web Analytics Mega Panel -->
+
     <div class="learn-card">
         <h2>📚 Web Analytics Overview Panel</h2>
         <p>This panel summarizes the most important concepts from your Web Analytics slides in a clear, interactive, and visual way.</p>
@@ -134,17 +130,17 @@
 
         <h4>🎯 Defining an Objective</h4>
         <p><strong>Goal Statement Template:</strong></p>
-        <p class="p-3 bg-light border rounded">To achieve <em>[BUSINESS OBJECTIVE]</em> we will track <em>[EVENTS/KPIs]</em> for <em>[TARGET AUDIENCE]</em> in <em>[GEOGRAPHY]</em> via <em>[PLATFORM]</em> over <em>[TIMEFRAME]</em>.</p>
+        <p class="p-3 bg-light border rounded text-dark">To achieve <em>[BUSINESS OBJECTIVE]</em> we will track <em>[EVENTS/KPIs]</em> for <em>[TARGET AUDIENCE]</em> in <em>[GEOGRAPHY]</em> via <em>[PLATFORM]</em> over <em>[TIMEFRAME]</em>.</p>
 
         <button class="btn btn-outline-primary mb-3" onclick="alert('Example: Defining objectives helps measure what matters and align KPIs with business goals.')">Why Objectives Matter</button>
 
         <h4>📏 Metrics vs KPIs</h4>
         <div class="row">
             <div class="col-md-6">
-                <div class="p-3 mb-2 border rounded bg-white">📊 <strong>Metrics</strong><br>General measurements (page views, sessions, scroll depth).</div>
+                <div class="p-3 mb-2 border rounded bg-white text-dark">📊 <strong>Metrics</strong><br>General measurements (page views, sessions, scroll depth).</div>
             </div>
             <div class="col-md-6">
-                <div class="p-3 mb-2 border rounded bg-white">🎯 <strong>KPIs</strong><br>Metrics tied to business goals (conversion rate, CAC, retention).</div>
+                <div class="p-3 mb-2 border rounded bg-white text-dark">🎯 <strong>KPIs</strong><br>Metrics tied to business goals (conversion rate, CAC, retention).</div>
             </div>
         </div>
 
@@ -172,7 +168,7 @@
         <h4 class="mt-4">💡 Activity: Brainstorm Events</h4>
         <p>Click the button to generate an example event idea!</p>
         <button class="btn btn-info" onclick="generateEventIdea()">Generate Event Idea</button>
-        <p id="event-idea" class="mt-2 p-2 bg-light border rounded"></p>
+        <p id="event-idea" class="mt-2 p-2 bg-light border rounded text-dark"></p>
     </div>
 
     <script>
@@ -184,15 +180,3 @@
             'Video play or pause',
             'Form submission event',
             'Dropdown open/close',
-            'Time on page > 30 seconds',
-            'Outbound link click',
-            'Search bar usage',
-            'Login success event'
-        ];
-        const pick = ideas[Math.floor(Math.random() * ideas.length)];
-        document.getElementById('event-idea').innerText = '💡 Event idea: ' + pick;
-    }
-    </script>
-
-</body>
-</html>
