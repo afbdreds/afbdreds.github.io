@@ -118,13 +118,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-        <button id="scrollButton" class="btn btn-secondary" style="position: fixed; bottom: 30px; right: 30px; z-index: 999; border-radius: 50px; padding: 14px 20px; font-weight: 600;">Scroll Down</button>
-
-    <script>
-        document.getElementById('scrollButton').addEventListener('click', function() {
-            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-        });
-    </script>
+        
     <div class="container mt-5">
         <div class="learn-card text-center">
             <h3>🔄 Interactive Scroll Simulator</h3>
@@ -169,6 +163,7 @@
     const ctx = canvas.getContext('2d');
 
     let ballX = 200, ballY = 125;
+    let hitCount = 0;
     let ballDX = 3, ballDY = 2;
     let paddleY = 100;
     const paddleHeight = 60;
@@ -183,6 +178,10 @@
         ctx.fillStyle = '#38bdf8';
         ctx.fillRect(10, paddleY, 10, paddleHeight);
 
+        ctx.fillStyle = '#e2e8f0';
+        ctx.font = '16px Inter';
+        ctx.fillText('Hits: ' + hitCount, 320, 20);
+
         ctx.beginPath();
         ctx.arc(ballX, ballY, 8, 0, Math.PI * 2);
         ctx.fillStyle = '#a855f7';
@@ -195,13 +194,20 @@
 
         if (ballX < 20 && ballY > paddleY && ballY < paddleY + paddleHeight) {
             ballDX *= -1;
+            hitCount++;
         }
 
-        if (ballX < 0 || ballX > canvas.width) {
+        // Right wall
+        if (ballX > canvas.width - 8) {
+            ballDX *= -1;
+        }
+
+        if (ballX < 0) {
             ballX = 200;
             ballY = 125;
             ballDX = 3;
             ballDY = 2;
+        }
         }
 
         requestAnimationFrame(draw);
