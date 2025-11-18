@@ -163,10 +163,10 @@
     const ctx = canvas.getContext('2d');
 
     let ballX = 200, ballY = 125;
-    let hitCount = 0;
     let ballDX = 3, ballDY = 2;
     let paddleY = 100;
     const paddleHeight = 60;
+    let hitCount = 0;
 
     document.getElementById('pongSlider').addEventListener('input', function(e) {
         paddleY = (canvas.height - paddleHeight) * (e.target.value / 100);
@@ -175,46 +175,52 @@
     function draw() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+        // Paddle
         ctx.fillStyle = '#38bdf8';
         ctx.fillRect(10, paddleY, 10, paddleHeight);
 
+        // Hit counter
         ctx.fillStyle = '#e2e8f0';
         ctx.font = '16px Inter';
-        ctx.fillText('Hits: ' + hitCount, 320, 20);
+        ctx.fillText('Hits: ' + hitCount, 300, 20);
 
+        // Ball
         ctx.beginPath();
         ctx.arc(ballX, ballY, 8, 0, Math.PI * 2);
         ctx.fillStyle = '#a855f7';
         ctx.fill();
 
+        // Move ball
         ballX += ballDX;
         ballY += ballDY;
 
+        // Bounce top/bottom
         if (ballY < 8 || ballY > canvas.height - 8) ballDY *= -1;
 
+        // Bounce on paddle
         if (ballX < 20 && ballY > paddleY && ballY < paddleY + paddleHeight) {
             ballDX *= -1;
             hitCount++;
         }
 
-        // Right wall
+        // Bounce on right wall
         if (ballX > canvas.width - 8) {
             ballDX *= -1;
         }
 
-        if (ballX < 0) {
+        // Reset if ball leaves left side
+        if (ballX < -20) {
             ballX = 200;
             ballY = 125;
             ballDX = 3;
             ballDY = 2;
-        }
         }
 
         requestAnimationFrame(draw);
     }
 
     draw();
-    </script>
+</script>
 
 </body>
 </html>
