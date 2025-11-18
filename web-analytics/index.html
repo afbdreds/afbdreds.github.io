@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Interaction Tracking Demo</title>
+    <title>Interactive Web Analytics Learning Demo</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
     <style>
@@ -13,15 +13,31 @@
             font-family: Arial, sans-serif;
         }
         .container {
-            max-width: 900px;
+            max-width: 1000px;
         }
-        .website-card {
+        .website-card, .learn-card {
             border-radius: 12px;
             padding: 20px;
             background: white;
             box-shadow: 0 2px 6px rgba(0,0,0,0.1);
             margin-bottom: 20px;
         }
+        .funnel {
+            width: 100%;
+            margin: 20px auto;
+            text-align: center;
+        }
+        .funnel-step {
+            padding: 15px;
+            color: white;
+            margin: 5px auto;
+            width: 70%;
+            border-radius: 8px;
+        }
+        .step1 { background: #007bff; width: 80%; }
+        .step2 { background: #28a745; width: 65%; }
+        .step3 { background: #ffc107; width: 50%; }
+        .step4 { background: #dc3545; width: 35%; }
     </style>
 
     <!-- Microsoft Clarity -->
@@ -35,9 +51,41 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="mb-4">Tracking Demo — User Interactions</h1>
-        <p>This mock page includes buttons and interactions that simulate user behavior on popular websites. Use this page to demonstrate event tracking in Google Analytics and Microsoft Clarity.</p>
+        <h1 class="mb-4">Interactive Web Analytics Learning Page</h1>
+        <p>This page simulates real user actions while teaching concepts of Web Analytics, GA4, and Microsoft Clarity. Students can click buttons, explore funnels, and visualize how interactions are tracked.</p>
 
+        <!-- Learning Section -->
+        <div class="learn-card">
+            <h3>📊 Learn: What is Web Analytics?</h3>
+            <p>Web analytics is the measurement, collection, analysis, and reporting of web data for understanding and optimizing web usage.</p>
+            <ul>
+                <li>✔ Pageviews</li>
+                <li>✔ Events (button clicks, scrolls, video actions)</li>
+                <li>✔ Funnels (sequence of steps)</li>
+                <li>✔ Heatmaps (via Clarity)</li>
+            </ul>
+            <button class="btn btn-primary" onclick="alert('Example: This would send an analytics event.')">See Example Event</button>
+        </div>
+
+        <!-- Funnel Section -->
+        <div class="learn-card">
+            <h3>🧭 Conversion Funnel Example</h3>
+            <p>This funnel shows how users progress through a typical e-commerce journey.</p>
+            <div class="funnel">
+                <div class="funnel-step step1">1. Visit Website</div>
+                <div class="funnel-step step2">2. View Product Page</div>
+                <div class="funnel-step step3">3. Add to Cart</div>
+                <div class="funnel-step step4">4. Purchase</div>
+            </div>
+        </div>
+
+        <!-- Chart Demo Button -->
+        <div class="learn-card text-center">
+            <h3>📈 Show a Fake Analytics Chart</h3>
+            <button class="btn btn-info" onclick="alert('This would normally load a chart library like Chart.js or GA4 exploration.')">Show Chart</button>
+        </div>
+
+        <!-- Interaction Cards -->
         <div class="website-card">
             <h4>YouTube Mock Actions</h4>
             <button class="btn btn-danger mb-2" onclick="alert('Simulated: Play Video')">▶️ Play Video</button>
