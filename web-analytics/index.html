@@ -48,8 +48,8 @@
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         })(window, document, "clarity", "script", "u81eusj3ai");
     </script>
-
-    <!-- Google tag (gtag.js) -->
+    
+        <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GPLRSFHFQH"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -57,8 +57,6 @@
   gtag('js', new Date());
 
   gtag('config', 'G-GPLRSFHFQH');
-</script>
-    
 </head>
 <body>
     <div class="container">
@@ -109,5 +107,79 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+    <!-- Web Analytics Mega Panel -->
+    <div class="learn-card">
+        <h2>📚 Web Analytics Overview Panel</h2>
+        <p>This panel summarizes the most important concepts from your Web Analytics slides in a clear, interactive, and visual way.</p>
+
+        <h4>🔄 Analytics Cycle</h4>
+        <ul>
+            <li>Collect → Measure → Analyze → Report → Optimize</li>
+            <li>Traffic + User Interactions → Insights → Decisions</li>
+        </ul>
+
+        <h4>🎯 Defining an Objective</h4>
+        <p><strong>Goal Statement Template:</strong></p>
+        <p class="p-3 bg-light border rounded">To achieve <em>[BUSINESS OBJECTIVE]</em> we will track <em>[EVENTS/KPIs]</em> for <em>[TARGET AUDIENCE]</em> in <em>[GEOGRAPHY]</em> via <em>[PLATFORM]</em> over <em>[TIMEFRAME]</em>.</p>
+
+        <button class="btn btn-outline-primary mb-3" onclick="alert('Example: Defining objectives helps measure what matters and align KPIs with business goals.')">Why Objectives Matter</button>
+
+        <h4>📏 Metrics vs KPIs</h4>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="p-3 mb-2 border rounded bg-white">📊 <strong>Metrics</strong><br>General measurements (page views, sessions, scroll depth).</div>
+            </div>
+            <div class="col-md-6">
+                <div class="p-3 mb-2 border rounded bg-white">🎯 <strong>KPIs</strong><br>Metrics tied to business goals (conversion rate, CAC, retention).</div>
+            </div>
+        </div>
+
+        <h4>🧪 A/B Testing</h4>
+        <p>A/B testing compares two versions of a page to see which one performs better.</p>
+        <button class="btn btn-success" onclick="alert('Simulated A/B test triggered!')">Run a Fake A/B Test</button>
+
+        <h4 class="mt-4">🚦 Funnel Analysis</h4>
+        <p>Understand user drop-offs and bottlenecks.</p>
+        <button class="btn btn-warning" onclick="alert('Imagine: Showing funnel metrics here.')">Simulate Funnel Metrics</button>
+
+        <h4 class="mt-4">📍 Common Web Analytics Metrics</h4>
+        <ul>
+            <li>Sessions</li>
+            <li>Unique Visitors</li>
+            <li>Bounce Rate</li>
+            <li>Page Views</li>
+            <li>Scroll Depth</li>
+            <li>Traffic Sources</li>
+            <li>Retention Rate</li>
+            <li>Churn Rate</li>
+            <li>Cart Abandonment</li>
+        </ul>
+
+        <h4 class="mt-4">💡 Activity: Brainstorm Events</h4>
+        <p>Click the button to generate an example event idea!</p>
+        <button class="btn btn-info" onclick="generateEventIdea()">Generate Event Idea</button>
+        <p id="event-idea" class="mt-2 p-2 bg-light border rounded"></p>
+    </div>
+
+    <script>
+    function generateEventIdea() {
+        const ideas = [
+            'CTA button click (e.g., Sign Up)',
+            'Scroll depth 50% or 90%',
+            'Add to Cart event',
+            'Video play or pause',
+            'Form submission event',
+            'Dropdown open/close',
+            'Time on page > 30 seconds',
+            'Outbound link click',
+            'Search bar usage',
+            'Login success event'
+        ];
+        const pick = ideas[Math.floor(Math.random() * ideas.length)];
+        document.getElementById('event-idea').innerText = '💡 Event idea: ' + pick;
+    }
+    </script>
+
 </body>
 </html>
