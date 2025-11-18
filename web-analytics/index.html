@@ -53,16 +53,7 @@
         }
     </style>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GPEW4VK3GX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);} 
-      gtag('js', new Date());
-      gtag('config', 'G-GPEW4VK3GX');
-    </script>
-
-    <!-- Microsoft Clarity -->
+    <!-- Microsoft Clarity (your ID: u860791330) -->
     <script type="text/javascript">
         (function(c,l,a,r,i,t,y){
             c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -70,11 +61,12 @@
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         })(window, document, "clarity", "script", "u860791330");
     </script>
+
 </head>
 <body>
     <div class="container">
         <h1 class="mb-4">Interactive Web Analytics Learning Page</h1>
-        <p>This page simulates real user actions while teaching concepts of Web Analytics, GA4, and Microsoft Clarity. Students can click buttons, explore funnels, and visualize how interactions are tracked.</p>
+        <p>This page simulates real user actions while teaching concepts of Web Analytics, GA4, and Microsoft Clarity.</p>
 
         <div class="learn-card">
             <h3>📊 Learn: What is Web Analytics?</h3>
@@ -101,15 +93,11 @@
 
         <div class="learn-card text-center">
             <h3>📈 Show a Fake Analytics Chart</h3>
-            <button class="btn btn-info" onclick="alert('This would normally load a chart library like Chart.js or GA4 exploration.')">Show Chart</button>
+            <button class="btn btn-info" onclick="alert('This would normally load a chart library.')">Show Chart</button>
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-        
+    <!-- Scroll Simulator -->
     <div class="container mt-5">
         <div class="learn-card text-center">
             <h3>🔄 Interactive Scroll Simulator</h3>
@@ -135,11 +123,11 @@
 
         range.addEventListener('input', () => {
             value.textContent = `Scroll Depth: ${range.value}%`;
-            dot.style.top = `${range.value * 2.1}px`; // moves dot inside box
+            dot.style.top = `${range.value * 2.1}px`;
         });
     </script>
 
-    <!-- Simple Pong Game Controlled by Slider -->
+    <!-- Pong Game -->
     <div class="learn-card text-center">
         <h3>🎮 Mini Pong Game (Slider Controls the Paddle)</h3>
         <p>Move the slider to control the paddle and hit the ball!</p>
@@ -166,40 +154,32 @@
     function draw() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-        // Paddle
         ctx.fillStyle = '#38bdf8';
         ctx.fillRect(10, paddleY, 10, paddleHeight);
 
-        // Hit counter
         ctx.fillStyle = '#e2e8f0';
         ctx.font = '16px Inter';
         ctx.fillText('Hits: ' + hitCount, 300, 20);
 
-        // Ball
         ctx.beginPath();
         ctx.arc(ballX, ballY, 8, 0, Math.PI * 2);
         ctx.fillStyle = '#a855f7';
         ctx.fill();
 
-        // Move ball
         ballX += ballDX;
         ballY += ballDY;
 
-        // Bounce top/bottom
         if (ballY < 8 || ballY > canvas.height - 8) ballDY *= -1;
 
-        // Bounce on paddle
         if (ballX < 20 && ballY > paddleY && ballY < paddleY + paddleHeight) {
             ballDX *= -1;
             hitCount++;
         }
 
-        // Bounce on right wall
         if (ballX > canvas.width - 8) {
             ballDX *= -1;
         }
 
-        // Reset if ball leaves left side
         if (ballX < -20) {
             ballX = 200;
             ballY = 125;
@@ -211,7 +191,7 @@
     }
 
     draw();
-</script>
+    </script>
 
 </body>
 </html>
