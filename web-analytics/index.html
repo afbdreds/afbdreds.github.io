@@ -8,36 +8,49 @@
 
     <style>
         body {
-            background: #f5f7fa;
+            background: #0f172a; /* dark navy */
             padding: 40px;
-            font-family: Arial, sans-serif;
+            font-family: 'Inter', Arial, sans-serif;
+            color: #e2e8f0;
+        }
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            letter-spacing: -0.5px;
         }
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
         }
-        .website-card, .learn-card {
-            border-radius: 12px;
-            padding: 20px;
-            background: white;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
+        .learn-card, .website-card {
+            border-radius: 14px;
+            padding: 26px;
+            background: #1e293b; /* slate */
+            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+            margin-bottom: 24px;
+            transition: transform .2s ease, box-shadow .2s ease;
         }
-        .funnel {
-            width: 100%;
-            margin: 20px auto;
-            text-align: center;
+        .learn-card:hover, .website-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.35);
         }
         .funnel-step {
-            padding: 15px;
-            color: white;
-            margin: 5px auto;
+            padding: 16px;
+            margin: 6px auto;
             width: 70%;
             border-radius: 8px;
+            color: #fff;
+            font-weight: 600;
         }
-        .step1 { background: #007bff; width: 80%; }
-        .step2 { background: #28a745; width: 65%; }
-        .step3 { background: #ffc107; width: 50%; }
-        .step4 { background: #dc3545; width: 35%; }
+        .step1 { background: #3b82f6; width: 85%; }
+        .step2 { background: #06b6d4; width: 70%; }
+        .step3 { background: #a855f7; width: 55%; }
+        .step4 { background: #ef4444; width: 40%; }
+        button.btn {
+            border-radius: 8px;
+            font-weight: 600;
+        }
+        .title-accent {
+            color: #38bdf8;
+        }
     </style>
 
     <!-- Microsoft Clarity -->
@@ -49,16 +62,14 @@
         })(window, document, "clarity", "script", "u81eusj3ai");
     </script>
     
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GPEW4VK3GX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-GPEW4VK3GX');
-</script>
-    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GPEW4VK3GX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GPEW4VK3GX');
+    </script>
 </head>
 <body>
     <div class="container">
